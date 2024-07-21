@@ -7,18 +7,7 @@ return {
     'nvim-telescope/telescope-ui-select.nvim',
     'nvim-lua/plenary.nvim',
   },
-  config = function()
-    require('telescope').setup {
-      extensions = {
-        wrap_results = true,
-
-        fzf = {},
-        ['ui-select'] = {
-          require('telescope.themes').get_dropdown {},
-        },
-      },
-    }
-
+  opts = function()
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'smart_history')
     pcall(require('telescope').load_extension, 'ui-select')
@@ -98,5 +87,16 @@ return {
         -- When you move your cursor, the highlights will be cleared (the second autocommand).
       end,
     })
+
+    return {
+      extensions = {
+        wrap_results = true,
+
+        fzf = {},
+        ['ui-select'] = {
+          require('telescope.themes').get_dropdown {},
+        },
+      },
+    }
   end,
 }
