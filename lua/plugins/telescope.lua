@@ -13,6 +13,7 @@ return {
     pcall(require('telescope').load_extension, 'ui-select')
 
     local builtin = require 'telescope.builtin'
+    vim.keymap.set('n', '<space>ss', builtin.builtin)
     vim.keymap.set('n', '<space>sf', builtin.find_files)
     vim.keymap.set('n', '<space>sg', builtin.git_files)
     vim.keymap.set('n', '<space>st', builtin.help_tags)
@@ -95,6 +96,11 @@ return {
         fzf = {},
         ['ui-select'] = {
           require('telescope.themes').get_dropdown {},
+        },
+      },
+      pickers = {
+        colorscheme = {
+          enable_preview = true,
         },
       },
     }
