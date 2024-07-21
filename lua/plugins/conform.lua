@@ -7,6 +7,9 @@ return {
       python = { 'ruff_fix', 'ruff_format' },
       -- Use a sub-list to run only the first available formatter
       javascript = {},
+      nix = { 'nixfmt' },
+      jsonc = { 'jq' }, -- doesn't support comments
+      html = { 'djlint' },
     },
     format_on_save = function(bufnr)
       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then

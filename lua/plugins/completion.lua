@@ -35,6 +35,7 @@ return {
 
     local cmp = require 'cmp'
 
+    local cmp_select = { behavior = cmp.SelectBehavior.Select }
     cmp.setup {
       sources = {
         { name = 'nvim_lsp' },
@@ -42,8 +43,8 @@ return {
         { name = 'buffer' },
       },
       mapping = {
-        ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping.select_next_item(behavior),
+        ['<C-p>'] = cmp.mapping.select_prev_item(behavior),
         ['<C-y>'] = cmp.mapping(cmp.mapping.confirm {
           select = true,
         }),
