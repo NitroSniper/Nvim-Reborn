@@ -32,6 +32,9 @@ return {
         jsonc = { 'jq' }, -- doesn't support comments
         html = { 'djlint' },
         htmldjango = { 'djlint' },
+        javascript = {'biome'},
+        astro = {'biome'},
+        typescript = {'biome'},
       },
       format_on_save = function(bufnr)
         if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
