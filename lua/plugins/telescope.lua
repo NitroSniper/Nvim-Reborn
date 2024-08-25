@@ -58,6 +58,9 @@ return {
         --  Similar to document symbols, except searches over your entire project.
         map('<leader>ws', builtin.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
+        -- Fuzzy find all diagnostic in your current workspace.
+        map('<leader>we', builtin.diagnostics, '[W]orkspace diagnostic [E]rror messages')
+
         -- vim.keymap.set("n", "<space>gw", builtin.grep_string)
 
         -- vim.keymap.set("n", "<space>fa", function()
