@@ -30,6 +30,7 @@ vim.opt.softtabstop = 4
 vim.expandtab = true
 
 
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
@@ -117,7 +118,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 --[[
 -- Setup initial configuration,
--- 
+--
 -- Primarily just download and execute lazy.nvim
 --]]
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
